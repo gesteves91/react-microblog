@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+export default function App() {
+  const post = {
+    id: 1,
+    text: 'Hello World',
+    timestamp: 'a minute ago',
+    author: {
+      username: 'susan',
+    },
+  }
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Microblog</h1>
+      <p>
+        <b>{post.author.username}</b> &mdash; {post.timestamp}
+        <br />
+        {post.text}
+      </p>
+    </>
   );
 }
-
-export default App;
